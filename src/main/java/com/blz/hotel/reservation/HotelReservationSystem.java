@@ -1,32 +1,32 @@
+/* @Purpose: Ability to Add Hotel in a Hotel Reservation System With Hotel Name 
+ * And Rates For Regular Customer
+ */
 package com.blz.hotel.reservation;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class HotelReservationSystem {
+
 	// creation of arraylist
 	ArrayList<Hotel> hotelDetails = new ArrayList<Hotel>();
 
 	/*
-	 * @purpose: This is the method to add a new hotel details
+	 * @Purpose : This method is used to Add Hotel details in arraylist
 	 * 
-	 * @param: hotelName, regularCustomerRate
-	 *
-	 * @return: returns hotel details
+	 * @Param : Hotel
 	 */
-	public Hotel addHotelDetails(String hotelName, double regularCustomerRate) {
-		Hotel add = new Hotel(hotelName, regularCustomerRate);
-		add.setHotelName(hotelName);
-		add.setRegularCustomerRate(regularCustomerRate);
-		hotelDetails.add(add);
-		System.out.println(add);
-		return add;
+	public void addHotelDetails(Hotel hotel) {
+		hotelDetails.add(hotel);
 	}
 
+	public List<Hotel> getHotelList() {
+		return hotelDetails;
+	}
+
+	// main method
 	public static void main(String[] args) {
 		System.out.println("Welcome to Hotel Reservation System ");
-		HotelReservationSystem addHotel = new HotelReservationSystem();
 
-		addHotel.addHotelDetails("Lakewood", 1000);
-		addHotel.addHotelDetails("Bridgewood", 2000);
 	}
 }
